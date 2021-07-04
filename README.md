@@ -44,8 +44,25 @@
 <div align="justify">The similarity of the signatures is the fraction of the min-hash functions (rows) in which they agree. So the similarity of signature for C1 and C3 is 2/3 as 1st and 3rd row are same. <b>Expected similarity of two signatures is equal to the Jaccard similarity of the columns. The longer the signatures, the lower the error</b>. In the below example you can see this to some extent.</div>
 
 <br>
-<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/minhash2.JPG"/></p>
+<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/minhash_2.JPG"/></p>
 
 <div align="justify">So using min-hashing we have solved the problem of space complexity by eliminating the sparseness and at the same time preserving the similarity.</div>
 
+### Locality-sensitive hashing:
+
+<div align="justify">The general idea of LSH is to find a algorithm such that if we input signatures of 2 documents, it tells us that those 2 documents form a candidate pair or not i.e. their similarity is greater than a threshold t. Remember that we are taking similarity of signatures as a proxy for Jaccard similarity between the original documents.<br></div>
+Specifically for min-hash signature matrix:
+<br>
+- Hash columns of signature matrix M using several hash functions
+- Hash columns of signature matrix M using several hash functions
+
+<b>Here is the algorithm:</b>
+
+- Divide the signature matrix into b bands, each band having r rows.
+- For each band, hash its portion of each column to a hash table with k buckets.
+- Candidate column pairs are those that hash to the same bucket for at least 1 band.
+- Tune b and r to catch most similar pairs but few non similar pairs.
+
+<br>
+<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/img_3.png"/></p>
 
