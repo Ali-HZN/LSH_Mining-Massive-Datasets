@@ -53,6 +53,7 @@
 
 <div align="justify">The general idea of LSH is to find a algorithm such that if we input signatures of 2 documents, it tells us that those 2 documents form a candidate pair or not i.e. their similarity is greater than a threshold t. Remember that we are taking similarity of signatures as a proxy for Jaccard similarity between the original documents.<br></div>
 Specifically for min-hash signature matrix:
+
 <br>
 
 - Hash columns of signature matrix M using several hash functions
@@ -74,3 +75,5 @@ Specifically for min-hash signature matrix:
 
 <br>
 <p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/band.JPG"/></p>
+
+To read more on the code implementation of LSH, checkout this [Website - Chapter3](http://www.mmds.org/)
