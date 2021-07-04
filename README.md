@@ -19,5 +19,23 @@
 
 <div align="justify">In this step, we convert each document into a set of characters of length k (also known as k-shingles or k-grams). The key idea is to represent each document in our collection as a set of k-shingles. For example One of the document (D): “Nadal”. Now if we’re interested in 2-shingles, then our set: {Na, ad, da, al}. Similarly set of 3-shingles: {Nad, ada, dal}. With this methodalogy Similar documents are more likely to share more shingles and reordering paragraphs in a document of changing words doesn’t have much affect on shingles. k value of 8–10 is generally used in practice. A small value will result in many shingles which are present in most of the documents (bad for differentiating documents).</div>
 
+### Hashing:
+
+<div align="justify">The idea of hashing is to convert each document to a small signature using a hashing function H. Suppose a document in our corpus is denoted by d. Then:</div>
 <br>
-<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/shingles.JPG"/></p>
+- H(d) is the signature and it’s small enough to fit in memory
+- If similarity(d1,d2) is high then Probability(H(d1)==H(d2)) is high
+- If similarity(d1,d2) is low then Probability(H(d1)==H(d2)) is low
+<br>
+<div align="justify">Choice of hashing function is tightly linked to the similarity metric we’re using. For Jaccard similarity the appropriate hashing function is min-hashing.</div>
+
+#### Min Hashing Algorithm:
+<div align="justify">This is the critical and the most magical aspect of this algorithm so pay attention:</div>
+
+- <b>Step 1</b>: Random permutation (π) of row index of document shingle matrix.
+- <b>Step 2</b>: Hash function is the index of the first (in the permuted order) row in which column C has value 1. Do this several time (use different permutations) to create signature of a column.
+
+<br>
+<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/minhash.JPG"/></p>
+
+
