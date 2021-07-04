@@ -56,6 +56,7 @@ Specifically for min-hash signature matrix:
 
 <br>
 <br>
+
 - Hash columns of signature matrix M using several hash functions
 - Hash columns of signature matrix M using several hash functions
 
