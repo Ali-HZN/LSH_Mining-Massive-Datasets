@@ -55,7 +55,7 @@
 Specifically for min-hash signature matrix:
 
 <br>
-
+<br>
 - Hash columns of signature matrix M using several hash functions
 - Hash columns of signature matrix M using several hash functions
 
@@ -76,4 +76,7 @@ Specifically for min-hash signature matrix:
 <br>
 <p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/band.JPG"/></p>
 
-To read more on the code implementation of LSH, checkout this [Website - Chapter3](http://www.mmds.org/)
+To read more on the code implementation of LSH, refer to [Chapter3](http://www.mmds.org/)
+
+### References:
+[Locality Sensitive Hashing: An effective way of reducing the dimensionality of your data](https://towardsdatascience.com/understanding-locality-sensitive-hashing-49f6d1f6134)
