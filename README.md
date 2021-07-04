@@ -8,6 +8,7 @@
 
 <div align="justify">The problem we’re trying to solve is that <b> in a large collections of documents we want to find “near duplicate” pairs</b>. In the context of this problem, we can break down the LSH algorithm into 3  steps:<br></div>
 <br>
+
 - Shingling
 - Min hashing
 - Locality-sensitive hashing
@@ -53,6 +54,7 @@
 <div align="justify">The general idea of LSH is to find a algorithm such that if we input signatures of 2 documents, it tells us that those 2 documents form a candidate pair or not i.e. their similarity is greater than a threshold t. Remember that we are taking similarity of signatures as a proxy for Jaccard similarity between the original documents.<br></div>
 Specifically for min-hash signature matrix:
 <br>
+
 - Hash columns of signature matrix M using several hash functions
 - Hash columns of signature matrix M using several hash functions
 
@@ -66,3 +68,9 @@ Specifically for min-hash signature matrix:
 <br>
 <p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/img_3.png"/></p>
 
+#### Choice of b & r:
+
+<div align="justify">If we take b large i.e more number of hash functions, then we reduce r as b*r is a constant (number of rows in signature matrix). Intuitively it means that we’re increasing the probability of finding a candidate pair. This case is equivalent to taking a small t (similarity threshold). Generalised case for any b and r is shown below.</div>
+
+<br>
+<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/band.JPG"/></p>
