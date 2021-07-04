@@ -23,6 +23,7 @@
 
 <div align="justify">The idea of hashing is to convert each document to a small signature using a hashing function H. Suppose a document in our corpus is denoted by d. Then:</div>
 <br>
+
 - H(d) is the signature and it’s small enough to fit in memory
 - If similarity(d1,d2) is high then Probability(H(d1)==H(d2)) is high
 - If similarity(d1,d2) is low then Probability(H(d1)==H(d2)) is low
@@ -37,5 +38,14 @@
 
 <br>
 <p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/minhash.JPG"/></p>
+
+#### Min-hash property:
+
+<div align="justify">The similarity of the signatures is the fraction of the min-hash functions (rows) in which they agree. So the similarity of signature for C1 and C3 is 2/3 as 1st and 3rd row are same. <b>Expected similarity of two signatures is equal to the Jaccard similarity of the columns. The longer the signatures, the lower the error</b>. In the below example you can see this to some extent.</div>
+
+<br>
+<p align="center"><img src="https://github.com/Ali-HZN/LSH_Mining-Massive-Datasets/blob/main/images/minhash2.JPG"/></p>
+
+<div align="justify">So using min-hashing we have solved the problem of space complexity by eliminating the sparseness and at the same time preserving the similarity.</div>
 
 
