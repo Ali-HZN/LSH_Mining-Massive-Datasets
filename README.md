@@ -1,1 +1,2 @@
-# LSH_Mining-Massive-Datasets
+# Locality-Sensitive Hashing (LSH)
+
